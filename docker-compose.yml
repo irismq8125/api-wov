@@ -1,13 +1,5 @@
 ﻿version: "3.4"
 services:
-  mssql-server:
-    image: mcr.microsoft.com/mssql/server:2022-latest  
-    environment:
-        ACCEPT_EULA: "Y"
-        SA_PASSWORD: "Abcd1234"
-        MSSQL_PID: Express
-    ports:
-        - "1433:1433" 
   api-app:
     build: .
     ports:

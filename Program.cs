@@ -41,10 +41,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//builder.WebHost.ConfigureKestrel(w =>
-//{
-//    w.Listen(IPAddress.Any, builder.Configuration.GetValue("ApiWov", 80));
-//});
+builder.WebHost.ConfigureKestrel(w =>
+{
+    w.Listen(IPAddress.Any, builder.Configuration.GetValue("ApiWov", 80));
+});
 
 var app = builder.Build();
 
